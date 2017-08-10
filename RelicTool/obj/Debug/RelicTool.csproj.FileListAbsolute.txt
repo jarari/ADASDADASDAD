@@ -1,0 +1,13 @@
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Windows.winmd
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.csprojResolveAssemblyReference.cache
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.csproj.GenerateResource.Cache
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\RelicTool.exe.config
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\RelicTool.exe
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\RelicTool.pdb
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.Properties.Resources.resources
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.exe
+c:\users\racel\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.pdb
+C:\Users\racel\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.Main.resources
+C:\Users\racel\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\RelicTool.RewardForm.resources
+C:\Users\racel\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\racel\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml

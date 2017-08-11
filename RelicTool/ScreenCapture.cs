@@ -8,6 +8,10 @@ using System.Windows.Forms;
 
 namespace RelicTool {
     public class ScreenCapture {
+        private static int count = 0;
+        private static int sequence = 10;
+        private static double maxfactor = (double)1 / 4;
+        private static double minfactor = (double)1 / 12;
         public static void SaveScreenshot(IntPtr hwnd, Stream stream) {
             var rect = new User32.Rect();
             User32.GetWindowRect(hwnd, ref rect);
@@ -25,7 +29,7 @@ namespace RelicTool {
                 graphics.CopyFromScreen(rect.left, rect.top + (int)(height / 8f * 3f), 0, 0, new Size(width, (int)(height / 8f)), CopyPixelOperation.SourceCopy);
                 //bmp = ReplaceColor(bmp, Color.FromArgb(255, 96, 73, 58), 40, 40, 40, Color.FromArgb(255, 160, 141, 90));
                 Random rand = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
-                bmp = Sharpen(bmp, (rand.Next() % 10 / (double)3 + 1) / 16);
+                bmp = Sharpen(bmp, minfactor + (maxfactor - minfactor) / (double)sequence * (double)count);
                 //bmp.Save(Application.StartupPath + "\\test.png", ImageFormat.Png);
             }
             else{
@@ -37,6 +41,10 @@ namespace RelicTool {
             bmp.Save(stream, ImageFormat.Png);
 
             bmp.Dispose();
+
+            count++;
+            if (count > sequence)
+                count = 0;
         }
 
         private class User32 {
@@ -113,6 +121,10 @@ namespace RelicTool {
 
             return target;
         }*/
+
+        //Implemented from https://stackoverflow.com/questions/903632/sharpen-on-a-bitmap-using-c-sharp
+        //Original code by Daniel Brückner, edited by niaher and David Johnson.
+        //Modified to produce better results for OCR.
         public static Bitmap Sharpen(Bitmap image, double factor) {
             Bitmap sharpenImage = (Bitmap)image.Clone();
 
@@ -125,9 +137,9 @@ namespace RelicTool {
 
             double[,] filter = new double[filterWidth, filterHeight] {
                 { -1, -1, -1, -1, -1 },
-                { -1,  1.3,  1.3,  1.3, -1 },
-                { -1,  1.3,  16,  1.3, -1 },
-                { -1,  1.3,  1.3,  1.3, -1 },
+                { -1,  1,  1,  1, -1 },
+                { -1,  1,  16,  1, -1 },
+                { -1,  1,  1,  1, -1 },
                 { -1, -1, -1, -1, -1 }
             };
             double bias = 0.0;

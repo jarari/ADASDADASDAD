@@ -32,7 +32,7 @@ namespace RelicTool {
                     Item item = MainBehavior.rewards[i];
                     if (item == null)
                         continue;
-                    e.Graphics.DrawString("Name: " + item.GetLocalization() + " Ducats: " + item.GetDucats() + " Plats: " + item.GetPlats() + "D/P: " + (double)item.GetDucats() / item.GetPlats(), font, blackbrush, new Point(5, 20 + i * 30));
+                    e.Graphics.DrawString("Name: " + item.GetLocalization() + " Ducats: " + item.GetDucats() + " Plats: " + item.GetPlats() + " D/P: " + (double)item.GetDucats() / item.GetPlats(), font, blackbrush, new Point(5, 20 + i * 30));
                 }
             }
         }

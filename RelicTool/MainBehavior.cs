@@ -61,7 +61,7 @@ namespace RelicTool {
                                 break;
                             }
                         }
-                        if (!exists) {
+                        if (!exists && rewardcount < 4) {
                             rewards[rewardcount] = item;
                             rewardcount++;
                             item.SetPlat((int)await MarketPuller.GetCheapest(item.GetName()));
